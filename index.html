@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Know Your PC makes computer knowledge simple. Learn PC hardware, troubleshooting, and technology basics.">
+  <title>Know Your PC | Technology Made Simple</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">KNOW<span>YOUR PC</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#topics">Learn</a>
+      <a href="#articles">Articles</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">YOUR COMPUTER LEARNING HUB</p>
+      <h1>Understand Your PC.<br><span>Master Your Tech.</span></h1>
+      <p class="intro">
+        Learn how computers work, fix common problems,
+        and make smarter technology decisions.
+      </p>
+      <a class="button" href="#articles">Explore PC Guides →</a>
+    </section>
+
+    <section class="topics" id="topics">
+      <h2>What do you want to learn?</h2>
+      <div class="topic-grid">
+        <a class="topic" href="#articles">
+          <span>🖥️</span>
+          <h3>PC Components</h3>
+          <p>Understand RAM, CPUs, storage and more.</p>
+        </a>
+        <a class="topic" href="#articles">
+          <span>🔧</span>
+          <h3>Troubleshooting</h3>
+          <p>Learn to solve everyday PC problems.</p>
+        </a>
+        <a class="topic" href="#articles">
+          <span>💿</span>
+          <h3>Software Guides</h3>
+          <p>Get more from Windows and your apps.</p>
+        </a>
+        <a class="topic" href="#articles">
+          <span>🛡️</span>
+          <h3>Online Safety</h3>
+          <p>Learn the basics of computer security.</p>
+        </a>
+      </div>
+    </section>
+
+    
+<section class="articles" id="articles">
+  <p class="eyebrow">KNOWLEDGE LIBRARY</p>
+  <h2>Find your next PC guide</h2>
+
+  <div class="article-tools">
+    <label for="articleSearch">Search computer guides</label>
+
+    <div class="search-box">
+      <span aria-hidden="true">🔎</span>
+      <input
+        type="search"
+        id="articleSearch"
+        placeholder="Try RAM, slow PC, Windows..."
+        autocomplete="off"
+      >
+      <button type="button" id="clearSearch"
+        aria-label="Clear search">×</button>
+    </div>
+
+    <label for="categoryFilter">Filter by topic</label>
+    <select id="categoryFilter">
+      <option value="all">All topics</option>
+      <option value="components">PC Components</option>
+      <option value="troubleshooting">Troubleshooting</option>
+      <option value="software">Software Guides</option>
+      <option value="security">Online Safety</option>
+    </select>
+  </div>
+
+  <p id="resultsCount" class="results-count"
+     aria-live="polite">2 guides available</p>
+
+  <div class="article-grid" id="articleGrid">
+
+    <article class="article-card"
+      data-category="components"
+      data-search="ram memory computer hardware upgrade">
+      <p class="category">PC COMPONENTS</p>
+      <h3>What Is RAM and Why Does It Matter?</h3>
+      <p>Learn how computer memory works and how much you may need.</p>
+      <a class="read-more" href="articles/what-is-ram.html">
+        Read the guide →
+      </a>
+    </article>
+
+    <article class="article-card"
+      data-category="troubleshooting"
+      data-search="slow pc computer performance speed freezing">
+      <p class="category">TROUBLESHOOTING</p>
+      <h3>Why Is My Computer So Slow?</h3>
+      <p>Explore common causes of slow performance and safe fixes.</p>
+      <a class="read-more" href="articles/why-pc-is-slow.html">
+        Read the guide →
+      </a>
+    </article>
+
+  </div>
+
+  <p id="noResults" class="no-results" hidden>
+    No guides found. Try another search or choose All topics.
+  </p>
+</section>
+  </main>
+
+  <footer>
+    <p>© 2026 Know Your PC. Learn something new about tech.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
