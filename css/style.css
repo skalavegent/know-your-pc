@@ -554,3 +554,231 @@ footer {
         transform: none;
     }
 }
+
+
+/* ==========================================
+   PHASE 6.4 — RESPONSIVE & ACCESSIBLE DESIGN
+   ========================================== */
+
+/* Consistent sizing across the website */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+/* Keep images and embedded media inside their containers */
+img,
+video,
+iframe,
+svg {
+    max-width: 100%;
+}
+
+img,
+video {
+    height: auto;
+}
+
+/* Avoid long links or code forcing horizontal page scrolling */
+p,
+li,
+a,
+h1,
+h2,
+h3 {
+    overflow-wrap: anywhere;
+}
+
+/* Make keyboard focus visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+
+/* Make common interactive controls easier to tap */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+    min-height: 44px;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    font-size: 16px;
+}
+
+/* Prevent wide tables from breaking article layouts */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-wrapper,
+.table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive article text */
+article p,
+article li {
+    line-height: 1.8;
+}
+
+article h1 {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    line-height: 1.2;
+}
+
+article h2 {
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    line-height: 1.3;
+}
+
+/* Tablet layouts */
+@media (max-width: 900px) {
+    .container,
+    .content,
+    .main-content {
+        max-width: 100%;
+    }
+
+    .article-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Phone layouts */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container,
+    .content,
+    .main-content {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: clamp(1.8rem, 8vw, 2.3rem);
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+        line-height: 1.3;
+    }
+
+    /* Let navigation links wrap instead of overflowing */
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 6px 8px;
+    }
+
+    /* One card per row on smaller screens */
+    .article-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .article-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Keep search and filters usable on narrow screens */
+    #searchInput,
+    #search,
+    #categoryFilter,
+    #category-filter {
+        width: 100%;
+        max-width: 100%;
+        min-height: 44px;
+    }
+
+    /* Keep article content inside the screen */
+    pre {
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: pre;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .info-page,
+    .contact-page {
+        width: calc(100% - 32px);
+        padding-top: 24px;
+    }
+
+    .info-hero,
+    .contact-hero {
+        padding: 24px;
+    }
+}
+
+/* Respect the visitor's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
