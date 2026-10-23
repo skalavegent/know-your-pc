@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact Us | Know Your PC</title>
+    <meta name="description" content="Contact Know Your PC with computer questions, article suggestions, website feedback or corrections to our beginner-friendly technology guides.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .contact-page {
+            width: min(100% - 32px, 900px);
+            margin: 0 auto;
+            padding: 48px 0 64px;
+            color: #0f172a;
+        }
+
+        .contact-hero {
+            padding: 36px;
+            margin-bottom: 28px;
+            border-radius: 20px;
+            background: #101d35;
+            color: #ffffff;
+        }
+
+        .contact-eyebrow {
+            color: #93c5fd;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .contact-hero h1 {
+            margin: 12px 0;
+            font-size: clamp(30px, 5vw, 44px);
+            line-height: 1.2;
+        }
+
+        .contact-hero p {
+            max-width: 650px;
+            color: #dbeafe;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .contact-card {
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            background: #ffffff;
+        }
+
+        .contact-card h2 {
+            margin: 0 0 12px;
+            font-size: 21px;
+            color: #0f172a;
+        }
+
+        .contact-card p {
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.5;
+            text-decoration: none;
+        }
+
+        .contact-button:hover {
+            background: #1d4ed8;
+        }
+
+        .contact-note {
+            margin-top: 24px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #eff6ff;
+            color: #1e40af;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .contact-back {
+            margin-top: 28px;
+        }
+
+        .contact-back a {
+            color: #2563eb;
+        }
+
+        .contact-footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .contact-footer a {
+            color: #2563eb;
+        }
+
+        @media (max-width: 600px) {
+            .contact-page {
+                padding-top: 24px;
+            }
+
+            .contact-hero {
+                padding: 24px;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="contact-page">
+        <header class="contact-hero">
+            <div class="contact-eyebrow">Get in touch</div>
+
+            <h1>Let's talk tech.</h1>
+
+            <p>
+                Have a computer question, a suggestion for
+                a future article, or feedback about the site?
+                Get in touch with Know Your PC.
+            </p>
+        </header>
+
+        <div class="contact-content">
+            <section class="contact-card">
+                <h2>General enquiries</h2>
+
+                <p>
+                    Ask a question about our content, share
+                    feedback, or tell us what you'd like to
+                    learn about computers.
+                </p>
+
+                <a class="contact-button"
+                   href="mailto:YOUR_EMAIL@example.com?subject=Know%20Your%20PC%20Enquiry">
+                    Send an email →
+                </a>
+            </section>
+
+            <section class="contact-card">
+                <h2>Suggest an article</h2>
+
+                <p>
+                    Is there a PC problem or technology topic
+                    you'd like us to explain? Send your idea
+                    and help shape future beginner-friendly
+                    guides.
+                </p>
+
+                <a class="contact-button"
+                   href="mailto:YOUR_EMAIL@example.com?subject=Article%20Suggestion">
+                    Suggest a topic →
+                </a>
+            </section>
+
+            <section class="contact-card">
+                <h2>Report a correction</h2>
+
+                <p>
+                    Found an error, a broken link or an
+                    instruction that needs clarification?
+                    Tell us which article needs attention.
+                </p>
+
+                <a class="contact-button"
+                   href="mailto:YOUR_EMAIL@example.com?subject=Website%20Correction">
+                    Send feedback →
+                </a>
+            </section>
+
+            <section class="contact-card">
+                <h2>Partnership enquiries</h2>
+
+                <p>
+                    Interested in a relevant technology
+                    collaboration, educational resource or
+                    partnership? Introduce your idea by email.
+                </p>
+
+                <a class="contact-button"
+                   href="mailto:YOUR_EMAIL@example.com?subject=Partnership%20Enquiry">
+                    Discuss a partnership →
+                </a>
+            </section>
+        </div>
+
+        <div class="contact-note">
+            <strong>Helpful tip:</strong>
+            When reporting a problem with an article,
+            include its title and a short description of
+            the issue. Never email passwords, banking
+            details or other sensitive information.
+        </div>
+
+        <div class="contact-back">
+            <a href="index.html">← Back to the homepage</a>
+            &nbsp; · &nbsp;
+            <a href="about.html">About Know Your PC</a>
+        </div>
+
+        <footer class="contact-footer">
+            <p>
+                © <span id="currentYear"></span> Know Your PC.
+            </p>
+            <p>
+                <a href="index.html">Home</a> ·
+                <a href="about.html">About</a>
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+    </script>
+</body>
+  </html>
