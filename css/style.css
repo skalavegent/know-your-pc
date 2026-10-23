@@ -401,3 +401,156 @@ footer {
     font-size: 14px;
   }
 }
+
+
+/* ==================================
+   KNOW YOUR PC - ARTICLE CARD DESIGN
+   ================================== */
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    border-color: #93c5fd;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+}
+
+.article-card__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.category-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.reading-time {
+    color: #64748b;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.article-card h3 {
+    margin: 0 0 12px;
+    color: #0f172a;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+}
+
+.article-card p {
+    margin: 0 0 22px;
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.article-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    margin-top: auto;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.article-card__link span {
+    transition: transform 0.2s ease;
+}
+
+.article-card__link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.article-card__link:hover span {
+    transform: translateX(4px);
+}
+
+.article-card a:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .article-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .article-card {
+        padding: 20px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 560px) {
+    .article-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .article-card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .article-card h3 {
+        font-size: 19px;
+    }
+
+    .article-card p {
+        font-size: 14px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .article-card,
+    .article-card__link span {
+        transition: none;
+    }
+
+    .article-card:hover {
+        transform: none;
+    }
+}
