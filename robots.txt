@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://skalavegent.github.io/know-your-pc/sitemap.xml
