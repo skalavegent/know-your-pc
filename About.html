@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>About Us | Know Your PC</title>
+    <meta name="description" content="Discover the mission behind Know Your PC, a beginner-friendly technology blog helping readers understand computer hardware, software, troubleshooting and security.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .info-page {
+            width: min(100% - 32px, 900px);
+            margin: 0 auto;
+            padding: 48px 0 64px;
+            color: #0f172a;
+        }
+
+        .info-hero {
+            padding: 36px;
+            margin-bottom: 28px;
+            border-radius: 20px;
+            background: #101d35;
+            color: #ffffff;
+        }
+
+        .info-eyebrow {
+            color: #93c5fd;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .info-hero h1 {
+            margin: 12px 0;
+            font-size: clamp(30px, 5vw, 46px);
+            line-height: 1.15;
+        }
+
+        .info-hero p {
+            max-width: 650px;
+            color: #dbeafe;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .info-section {
+            padding: 28px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .info-section h2 {
+            margin: 0 0 12px;
+            color: #0f172a;
+            font-size: 25px;
+        }
+
+        .info-section p,
+        .info-section li {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .info-section ul {
+            padding-left: 22px;
+        }
+
+        .info-cta {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .info-cta:hover {
+            background: #1d4ed8;
+        }
+
+        .info-footer {
+            padding-top: 28px;
+            color: #64748b;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .info-footer a {
+            color: #2563eb;
+        }
+
+        @media (max-width: 560px) {
+            .info-page {
+                padding-top: 24px;
+            }
+
+            .info-hero {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="info-page">
+        <header class="info-hero">
+            <div class="info-eyebrow">About Know Your PC</div>
+
+            <h1>Understand Your PC. Master Your Tech.</h1>
+
+            <p>
+                Technology shouldn't feel complicated.
+                Know Your PC helps beginners understand their
+                computers through practical guides, clear
+                explanations and useful troubleshooting advice.
+            </p>
+        </header>
+
+        <section class="info-section">
+            <h2>Our mission</h2>
+
+            <p>
+                Our mission is to make computer knowledge easier
+                to access and understand. We break down technical
+                topics into manageable steps so readers can make
+                more informed decisions about their computers.
+            </p>
+
+            <p>
+                Whether you're using a computer for studying,
+                work, gaming or everyday tasks, we're here to
+                help you understand how it works and how to
+                look after it.
+            </p>
+        </section>
+
+        <section class="info-section">
+            <h2>What you'll learn</h2>
+
+            <ul>
+                <li>
+                    <strong>PC components:</strong>
+                    Learn about RAM, processors, storage and
+                    computer upgrades.
+                </li>
+                <li>
+                    <strong>Troubleshooting:</strong>
+                    Find practical steps for common performance
+                    and Windows problems.
+                </li>
+                <li>
+                    <strong>Software:</strong>
+                    Understand useful tools, system settings
+                    and everyday computer tasks.
+                </li>
+                <li>
+                    <strong>Security:</strong>
+                    Learn safer computing habits and ways to
+                    reduce malware risks.
+                </li>
+            </ul>
+        </section>
+
+        <section class="info-section">
+            <h2>Built for beginners</h2>
+
+            <p>
+                Know Your PC is designed for people who want
+                straightforward explanations without needing
+                an advanced technical background.
+                We aim to provide useful, accessible information
+                for readers in South Africa and beyond.
+            </p>
+
+            <p>
+                Before following instructions that change system
+                settings or delete files, take time to understand
+                the steps and back up important information.
+            </p>
+        </section>
+
+        <section class="info-section">
+            <h2>Let's learn together</h2>
+
+            <p>
+                Have a computer question, a topic suggestion
+                or feedback about one of our guides?
+                We'd love to hear from you.
+            </p>
+
+            <a class="info-cta" href="contact.html">
+                Contact Know Your PC →
+            </a>
+
+            <p>
+                <a href="index.html">← Back to the homepage</a>
+            </p>
+        </section>
+
+        <footer class="info-footer">
+            <p>
+                © <span id="currentYear"></span> Know Your PC.
+                Learn something new about your computer.
+            </p>
+            <p>
+                <a href="index.html">Home</a> ·
+                <a href="contact.html">Contact</a>
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+    </script>
+</body>
+          </html>
