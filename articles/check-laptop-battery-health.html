@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Check Laptop Battery Health in Windows | Know Your PC</title>
+  <meta name="description" content="Learn how to check laptop battery health in Windows using a built-in battery report. Understand design capacity, full charge capacity and practical next steps.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://skalavegent.github.io/know-your-pc/articles/check-laptop-battery-health.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Check Laptop Battery Health in Windows | Know Your PC">
+  <meta property="og:description" content="Use Windows' built-in battery report to check laptop battery capacity and understand what the results mean.">
+  <meta property="og:url" content="https://skalavegent.github.io/know-your-pc/articles/check-laptop-battery-health.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Check Laptop Battery Health in Windows",
+    "description": "Learn how to check laptop battery health in Windows using a built-in battery report.",
+    "mainEntityOfPage": "https://skalavegent.github.io/know-your-pc/articles/check-laptop-battery-health.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Know Your PC",
+      "url": "https://skalavegent.github.io/know-your-pc/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="../index.html" class="site-logo" aria-label="Know Your PC homepage">Know Your PC</a>
+      <nav aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="article-content">
+      <p><a href="../index.html">Home</a> / Laptop guides</p>
+      <header class="article-header">
+        <p class="category-label">Troubleshooting</p>
+        <h1>How to Check Laptop Battery Health in Windows</h1>
+        <p>Does your laptop battery drain quickly, shut down unexpectedly, or last much less time than it used to? Windows includes a built-in battery report that can help you check the battery's reported capacity without installing extra software.</p>
+        <p><strong>Reading time:</strong> 5 minutes</p>
+      </header>
+
+      <nav aria-label="Article contents">
+        <h2>In this guide</h2>
+        <ul>
+          <li><a href="#before-you-start">Before you start</a></li>
+          <li><a href="#generate-report">Generate a Windows battery report</a></li>
+          <li><a href="#read-report">Understand the report</a></li>
+          <li><a href="#improve-battery-life">Improve battery life</a></li>
+          <li><a href="#when-to-replace">When should you consider replacing it?</a></li>
+          <li><a href="#related-guides">Related guides</a></li>
+        </ul>
+      </nav>
+
+      <section id="before-you-start">
+        <h2>Before you start</h2>
+        <p>This guide is for Windows laptops. The battery report is available on many Windows 10 and Windows 11 devices, but the details shown can vary by manufacturer and battery hardware. You normally do not need to download an app or pay for a diagnostic tool.</p>
+        <p>If your laptop battery or case is visibly swollen, the trackpad or keyboard is lifting, or the device smells unusual or becomes dangerously hot, stop using and charging it. Do not press, puncture, or attempt to remove a swollen battery yourself. Arrange professional service.</p>
+      </section>
+
+      <section id="generate-report">
+        <h2>Step 1: Generate a battery report</h2>
+        <ol>
+          <li>Save your work and open the Windows <strong>Start</strong> menu.</li>
+          <li>Type <strong>Command Prompt</strong> in the search box.</li>
+          <li>Open Command Prompt. Standard access is usually enough; if Windows reports that permission is required, try opening it as an administrator.</li>
+          <li>Type this command and press Enter:</li>
+        </ol>
+        <pre><code>powercfg /batteryreport</code></pre>
+        <p>Windows should display a message showing where it saved the report. The default location is often inside your user folder, with a filename such as <code>battery-report.html</code>. The exact path may differ.</p>
+        <ol start="5">
+          <li>Open File Explorer and navigate to the path shown in Command Prompt.</li>
+          <li>Open <code>battery-report.html</code> in your browser.</li>
+        </ol>
+        <p>If the command is not recognised or the report cannot be created, check that you are using Windows and try Command Prompt again. Some devices or managed work computers may restrict access to certain diagnostics.</p>
+      </section>
+
+      <section id="read-report">
+        <h2>Step 2: Understand the important numbers</h2>
+        <p>Look for the <strong>Installed batteries</strong> section. Two values are particularly useful:</p>
+        <ul>
+          <li><strong>Design Capacity:</strong> the battery's reported capacity when it was new.</li>
+          <li><strong>Full Charge Capacity:</strong> the amount of energy the battery can currently hold according to Windows' report.</li>
+        </ul>
+        <p>For example, imagine the report shows a design capacity of 50,000 mWh and a full charge capacity of 35,000 mWh. The reported capacity is approximately 70% of the original design capacity.</p>
+        <p>You can estimate it with this formula:</p>
+        <pre><code>(Full Charge Capacity ÷ Design Capacity) × 100</code></pre>
+        <p>Using the example above: (35,000 ÷ 50,000) × 100 = 70%.</p>
+        <p>This is an estimate based on the values reported by the battery system, not a perfect laboratory measurement. Capacity readings can vary, and battery health alone does not explain every case of short runtime.</p>
+
+        <h3>What does the percentage mean?</h3>
+        <ul>
+          <li><strong>Closer to 100%:</strong> reported capacity is closer to the original design capacity.</li>
+          <li><strong>Noticeably lower than when new:</strong> the battery has lost some of its original capacity, which is normal as rechargeable batteries age.</li>
+          <li><strong>Very low or changing unexpectedly:</strong> consider checking the laptop manufacturer's diagnostics or asking a qualified technician to assess the battery.</li>
+        </ul>
+        <p>There is no single percentage that proves every laptop battery must be replaced. Consider actual runtime, unexpected shutdowns, battery warnings, the laptop manufacturer's guidance, and whether the battery is physically safe.</p>
+
+        <h3>Check recent battery usage</h3>
+        <p>The report may also include recent usage, usage history, and battery capacity history. These sections can help you spot changes over time, but their availability and detail depend on the device and how long Windows has collected data.</p>
+      </section>
+
+      <section id="improve-battery-life">
+        <h2>Step 3: Improve everyday battery life</h2>
+        <p>If the battery is safe and the laptop works normally, these changes may help it last longer between charges. They do not restore capacity that the battery has already lost.</p>
+        <ol>
+          <li><strong>Reduce screen brightness.</strong> Use a comfortable brightness level rather than maximum brightness all day.</li>
+          <li><strong>Enable Battery Saver or Energy Saver.</strong> Find the power options in Windows Settings; the exact name and location can differ by Windows version.</li>
+          <li><strong>Close apps you do not need.</strong> Check Task Manager for apps using unusually high CPU or memory resources.</li>
+          <li><strong>Review startup apps.</strong> Disable unnecessary startup apps using Windows settings or Task Manager. Do not disable unfamiliar system processes at random.</li>
+          <li><strong>Install trusted Windows and manufacturer updates.</strong> Updates can resolve some power-management problems. Use Windows Update or your laptop manufacturer's official support site.</li>
+          <li><strong>Check power mode.</strong> A power-saving mode may extend runtime, while a performance mode can use more energy.</li>
+        </ol>
+        <p>If the laptop drains rapidly even while idle, becomes unusually hot, or loses charge while shut down, investigate further rather than assuming the battery alone is responsible.</p>
+        <p>Related reading: <a href="why-pc-is-slow.html">Why Is My PC So Slow?</a> and <a href="free-up-disk-space-safely.html">How to Free Up Disk Space Safely on Windows</a>.</p>
+      </section>
+
+      <section id="when-to-replace">
+        <h2>When should you consider replacing the battery?</h2>
+        <p>Consider a professional assessment if the battery no longer lasts long enough for your needs, Windows shows a battery-service warning, the laptop shuts down unexpectedly despite showing charge, or the reported capacity has fallen significantly.</p>
+        <p>Before buying a replacement, confirm your exact laptop model and the compatible battery part number. Use the manufacturer's support information or a reputable repairer. Avoid choosing a battery based on appearance alone, and do not open a laptop or handle an internal battery unless you have the appropriate skills and instructions.</p>
+        <p>If you are considering a second-hand laptop, check the battery report alongside the device's overall condition, performance, and charging behaviour. A battery report is useful evidence, but it is not a guarantee of the laptop's condition.</p>
+      </section>
+
+      <section id="related-guides">
+        <h2>Related Know Your PC guides</h2>
+        <ul>
+          <li><a href="check-pc-specifications.html">How to Check Your PC Specs in Windows</a> — identify your laptop's hardware and system details.</li>
+          <li><a href="why-pc-is-slow.html">Why Is My PC So Slow? 9 Practical Fixes</a> — troubleshoot performance problems.</li>
+          <li><a href="free-up-disk-space-safely.html">How to Free Up Disk Space Safely on Windows</a> — reclaim storage without deleting important files.</li>
+          <li><a href="protect-pc-from-malware.html">How to Protect Your PC from Malware</a> — follow practical security basics.</li>
+          <li><a href="what-is-ram.html">What Is RAM?</a> — understand an important part of your computer.</li>
+          <li><a href="hdd-vs-ssd.html">HDD vs SSD: Which Is Better for Your PC?</a> — compare common storage types.</li>
+          <li><a href="how-much-ram-do-you-need-2026.html">How Much RAM Do You Need in 2026?</a> — choose memory for everyday tasks.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final thoughts</h2>
+        <p>Windows' battery report is a free first step for understanding your laptop's battery capacity. Compare design capacity with full charge capacity, consider the laptop's real-world runtime, and get professional help if the battery looks damaged or behaves unsafely.</p>
+        <p>Have a computer question? Visit the <a href="../index.html">Know Your PC homepage</a> for more beginner-friendly guides, or use the <a href="../contact.html">Contact page</a> to get in touch.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Know Your PC. Understand Your PC. Master Your Tech.</p>
+      <nav aria-label="Footer navigation">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
