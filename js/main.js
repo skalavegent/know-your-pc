@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const clearButton = document.getElementById("clearSearch");
   const resultsCount = document.getElementById("resultsCount");
   const noResults = document.getElementById("noResults");
-  const articleGrid = document.getElementById("articleGrid");
+  const articleGrid =
+  document.getElementById("articleGrid") ||
+  document.querySelector(".articles");
 
   // Only run on pages that contain the article search.
   if (
