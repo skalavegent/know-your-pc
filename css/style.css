@@ -782,3 +782,29 @@ article h2 {
         scroll-behavior: auto !important;
     }
 }
+.related-guides {
+  margin: 32px 0;
+  padding: 20px;
+  background: #eef5ff;
+  border-left: 4px solid #2673ce;
+  border-radius: 10px;
+}
+
+.related-guides h2 {
+  margin-top: 0;
+  color: #123e72;
+}
+
+.related-guides ul {
+  padding-left: 20px;
+}
+
+.related-guides li {
+  margin-bottom: 10px;
+}
+
+.related-guides a {
+  color: #075cb7;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
